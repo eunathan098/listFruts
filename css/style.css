@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body{
+    background-color: rgb(246, 205, 129);
+}
+
+header{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(250, 112, 20, 0.935);
+}
+
+.header-logotipo{
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+}
+
+.header-navigation{
+    display: flex;
+    list-style: none;
+}
+
+.header-navigation li{
+    padding: 10px;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.header-navigation li:hover{
+    color:  rgba(250, 112, 20, 0.935);
+    background-color: #fff;
+}
+
+/* Content */
+
+.sessao-1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 600px;
+}
+
+.container{
+    display: flex;
+    margin-bottom: 50px;
+    background-color: rgba(250, 112, 20, 0.935);
+    width: 500px;
+    height: 250px;
+    flex-direction: column;
+}
+
+.container-header-frutas{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+    color: #fff;
+    font-weight: bold;
+    gap: 10px;
+    font-family: "Poppins", serif;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.639);
+}
+
+.container-input-btn{
+    display: flex;
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pesquisa{
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+.pesquisa:focus{
+    border: 3px solid rgb(152, 152, 247);
+    
+}
+
+.btn-add{
+    padding: 10px;
+    color: rgba(250, 112, 20, 0.935);
+    background-color: rgb(246, 205, 129);
+    border: none;
+    font-size: 15px;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-add:hover{
+    color: rgba(250, 112, 20, 0.935);
+    background-color: #fff;
+    border: 1px solid rgb(246, 205, 129);
+}
+
+.container-cart{
+    display: flex;
+    padding: 20px;
+    position: fixed;
+    z-index: 9999;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    top: 91%;
+    width: 100%;
+    background-color: rgba(250, 112, 20, 0.935);
+}
+
+.container-cart h2{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    cursor: pointer;
+}
+
+/* Container- modal-vazio */
+
+.container-modal-vazio{
+    display: flex;
+    position: fixed;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Poppins", serif;
+    display: none;
+    top: 85%;
+    transition: 0.3s ease-in-out;
+}
+
+/* Container Modal Aberto */
+
+.container-modal-open{
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-modal-open-itens{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.teste{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 550px;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+.container-btn-fechar{
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    height: 10%;
+    width: 100%;
+}
+
+#btn-fechar{
+    height: 30px;
+    cursor: pointer;
+}
+
+.container-itens-li{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100%;
+}
+
+.container-loader{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader {
+    position: absolute;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid rgba(250, 112, 20, 0.935);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: none;
+    top: 20%;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Quitanga </title>
+</head>
+<body>
+    <header>
+        <h1 class="header-logotipo"> Quitanga </h1>
+        <nav>
+            <ul class="header-navigation">
+                <li class=""> Home </li>
+                <li class=""> Serviços </li>
+                <li class=""> Contato</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sessao-1">
+        <div class="container" id="container">
+            <div class="container-header-frutas">
+                <h2> Adicione uma nova Fruta. </h2>
+                <img src="imagens/fruta-maca.png" alt="Fruta Maça" height="30px">
+            </div>
+            <div class="container-input-btn">
+                <input class="pesquisa" placeholder="Adicione uma nova Fruta..."type="text" id="addFrut">
+                <button class="btn-add" id="btn-add"> ADICIONAR FRUTA </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-cart">
+        <h2 id="btn-cart"> EXIBIR CARRINHO ATUAL ( 0 ) </h2>
+    </div>
+
+    <!-- Modal - Carrinho vazio  -->
+     <div class="container-modal-vazio" id="container-modal-vazio">
+        <div class="container-modal">
+            <p> O seu carrinho se encontra vazio. </p>
+        </div>
+     </div>
+
+     <div class="container-modal-open" id="container-modal-open">
+        <div class="container-modal-open-itens">
+            <div class="teste">
+                <div class="container-btn-fechar">
+                    <img id="btn-fechar" src="imagens/fechar.png" alt="btn-fechar">
+                </div>
+                <div class="container-itens-li">
+                    <p> Ops. Carrinho zerado </p>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="container-loader" id="container-loader">
+         <div class="loader" id="loader"> </div>
+     </div>
+    
+</body>
+</html>
