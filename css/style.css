@@ -163,7 +163,7 @@ header{
 /* Container Modal Aberto */
 
 .container-modal-open{
-    display: flex;
+    display: none;
     text-align: center;
     align-items: center;
     justify-content: center;
