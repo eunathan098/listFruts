@@ -13,17 +13,11 @@
 <body>
     <header>
         <h1 class="header-logotipo"> Quitanga </h1>
-        <nav>
-            <ul class="header-navigation">
-                <li class=""> Home </li>
-                <li class=""> Serviços </li>
-                <li class=""> Contato</li>
-            </ul>
-        </nav>
+        <img src="imagens/fruta-maca.png" alt="" height="30px">
     </header>
 
     <section class="sessao-1">
-        <div class="container" id="container">
+        <div id="container">
             <div class="container-header-frutas">
                 <h2> Adicione uma nova Fruta. </h2>
                 <img src="imagens/fruta-maca.png" alt="Fruta Maça" height="30px">
@@ -32,11 +26,16 @@
                 <input class="pesquisa" placeholder="Adicione uma nova Fruta..."type="text" id="addFrut">
                 <button class="btn-add" id="btn-add"> ADICIONAR FRUTA </button>
             </div>
+
+            <!-- Container doo Loader (Loading...) -->
+            <div class="container-loader" id="container-loader">
+                <div class="loader" id="loader"> </div>
+            </div>
         </div>
     </section>
 
     <div class="container-cart">
-        <h2 id="btn-cart"> EXIBIR CARRINHO ATUAL ( 0 ) </h2>
+        <h2 id="btn-cart"> EXIBIR CARRINHO ATUAL ( 3 ) </h2>
     </div>
 
     <!-- Modal - Carrinho vazio  -->
@@ -53,14 +52,50 @@
                     <img id="btn-fechar" src="imagens/fechar.png" alt="btn-fechar">
                 </div>
                 <div class="container-itens-li">
-                    <p> Ops. Carrinho zerado </p>
+                    <h1 class="itens-card-title"> ITENS DO CARRINHO </h1>
+
+                    <div class="container-itens">
+                        <div class="header-navigation-itens">
+                            <p> NOME </p>
+                            <p> QUANT </p>
+                            <p> PREÇO </p>
+                        </div>
+                      
+                        <div class="item-edit-delete">
+                            <p> Abacate </p>
+                            <p> 1 Unid </p>
+                            <p> R$ 5,99 </p>
+                            <div class="edit-delete">
+                                <img src="imagens/editar.png" alt="icon-editar" height="25px" id="edit-item">
+                                <img src="imagens/excluir.png" alt="icon-delete" height="25px" id="delete-item">
+                            </div>
+                        </div>
+
+                        <div class="item-edit-delete">
+                            <p> Melancia </p>
+                            <p> 1 kg </p>
+                            <p> R$ 5,99 </p>
+                            <div class="edit-delete">
+                                <img src="imagens/editar.png" alt="icon-editar" height="25px" id="edit-item">
+                                <img src="imagens/excluir.png" alt="icon-delete" height="25px" id="delete-item">
+                            </div>
+                        </div>
+
+                        <div class="item-edit-delete">
+                            <p> Melancia </p>
+                            <p> 1 kg </p>
+                            <p> R$ 5,99 </p>
+                            <div class="edit-delete">
+                                <img src="imagens/editar.png" alt="icon-editar" height="25px" id="edit-item">
+                                <img src="imagens/excluir.png" alt="icon-delete" height="25px" id="delete-item">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
      </div>
-     <div class="container-loader" id="container-loader">
-         <div class="loader" id="loader"> </div>
-     </div>
+     
     
 </body>
 </html>

@@ -8,6 +8,11 @@ const containerOpenFrut = document.getElementById("container-modal-open");
 const containerPrincipal = document.getElementById("container");  //Container Inicial
 const loader = document.getElementById("loader");  // Loader
 
+// edit item 
+
+const editItem = document.getElementById("edit-item");
+const deleteItem = document.getElementById("delete-item");
+
 // Adicionar um nova Fruta
 
 btnAdd.addEventListener('click', function(){
@@ -26,7 +31,7 @@ btnAdd.addEventListener('click', function(){
 
 btnCart.addEventListener('click', function(){
 
-    containerPrincipal.style.display = "none";
+    containerPrincipal.style.display = "none"
 
     loader.style.display = "block";
 
@@ -51,3 +56,17 @@ btnFechar.addEventListener('click', function(){
     containerOpenFrut.style.display = "none";
     containerPrincipal.style.display = "block";
 })
+
+// função editar item
+
+editItem.addEventListener("click", function(){
+    alert("Deseja editar este item selecionado ?");
+    console.log("deu certo")
+});
+
+// função excluir item
+
+deleteItem.addEventListener("click", function(){
+    alert("Tem certeza que quer excluir este Item ?");
+})
+

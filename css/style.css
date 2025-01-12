@@ -10,11 +10,12 @@ body{
 }
 
 header{
+    gap: 20px;
     display: flex;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color: rgba(250, 112, 20, 0.935);
 }
 
@@ -58,12 +59,12 @@ header{
     height: 600px;
 }
 
-.container{
+#container{
     display: flex;
     margin-bottom: 50px;
     background-color: rgba(250, 112, 20, 0.935);
     width: 500px;
-    height: 250px;
+    height: 300px;
     flex-direction: column;
 }
 
@@ -162,7 +163,7 @@ header{
 /* Container Modal Aberto */
 
 .container-modal-open{
-    display: none;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -209,6 +210,10 @@ header{
     cursor: pointer;
 }
 
+.container-itens{
+    width: 350px;
+}
+
 .container-itens-li{
     display: flex;
     text-align: center;
@@ -218,25 +223,81 @@ header{
     width: 100%;
 }
 
+.itens-card-title{
+    color: rgba(250, 112, 20, 0.935);
+    font-size: 20px;
+    font-family: "poppins";
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 3px solid rgba(250, 112, 20, 0.329);
+}
+
+.header-navigation-itens p{
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    font-family: "poppins";
+}
+
+.item-edit-delete p{
+    color: rgba(0, 0, 0, 0.59);
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
 .container-loader{
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 .loader {
-    position: absolute;
     border: 16px solid #f3f3f3;
     border-top: 16px solid rgba(250, 112, 20, 0.935);
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 55px;
+    height: 55px;
     animation: spin 2s linear infinite;
     display: none;
-    top: 20%;
+  }
+
+  .container-itens-li {
+    display: flex;
+    flex-direction: column;  /* Alinha os itens de forma vertical */
+    overflow-y: auto;        /* Ativa a rolagem vertical */
+    height: 300px;           /* Defina uma altura fixa para o container */
+    padding: 10px;           /* Espaçamento interno, se necessário */
+  }
+  
+  .header-navigation-itens {
+    display: flex;
+    padding: 10px;
+    gap: 60px;               /* Espaço entre os itens */
+  }
+  
+  .item-edit-delete{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    padding: 10px;
+    gap: 20px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.208);
+  }
+
+  .item-edit-delete:hover{
+    background-color: rgba(250, 112, 20, 0.935);
+  }
+
+  .edit-delete{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
   }
 
   @keyframes spin {
