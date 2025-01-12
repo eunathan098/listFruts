@@ -12,6 +12,7 @@ const loader = document.getElementById("loader");  // Loader
 
 const editItem = document.getElementById("edit-item");
 const deleteItem = document.getElementById("delete-item");
+const containerItemEditDelete = document.getElementById("item-edit-delete");
 
 // Adicionar um nova Fruta
 
@@ -66,7 +67,15 @@ editItem.addEventListener("click", function(){
 
 // função excluir item
 
-deleteItem.addEventListener("click", function(){
-    alert("Tem certeza que quer excluir este Item ?");
-})
+deleteItem.addEventListener("click", function() {
+    const deleteYes = prompt("Tem certeza que deseja excluir o item selecionado? Sim || Não");
+
+    if (deleteYes && deleteYes.toLowerCase() === "sim") {
+        alert("Item excluído com sucesso!");
+        containerItemEditDelete.remove(); // Remove o item da lista
+    } else {
+        alert("Exclusão cancelada.");
+    }
+});
+
 

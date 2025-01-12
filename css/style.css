@@ -95,6 +95,16 @@ header{
     padding: 10px;
     outline: none;
     font-size: 16px;
+    height: 40px;
+}
+
+.pesquisa1{
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    height: 40px;
+    width: 100%;
 }
 
 .pesquisa:focus{
@@ -253,6 +263,15 @@ header{
   width: 100%;
 }
 
+.container-quant-price{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+select{
+    height: 40px;
+}
 .loader {
     border: 16px solid #f3f3f3;
     border-top: 16px solid rgba(250, 112, 20, 0.935);
