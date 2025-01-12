@@ -26,8 +26,6 @@ btnAdd.addEventListener('click', function(){
     }
 })
 
-
-
 // Exibir Carrinho
 
 btnCart.addEventListener('click', function(){
@@ -72,10 +70,43 @@ deleteItem.addEventListener("click", function() {
 
     if (deleteYes && deleteYes.toLowerCase() === "sim") {
         alert("Item excluído com sucesso!");
-        containerItemEditDelete.remove(); // Remove o item da lista
+        containerItemEditDelete.remove(); 
     } else {
         alert("Exclusão cancelada.");
     }
 });
 
+// Seleciona o container com a classe .teste
+const container = document.querySelector('.teste');
+
+// Variáveis para armazenar a posição inicial do mouse e do container
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+// Função que inicia o arraste quando o mouse é pressionado
+container.addEventListener('mousedown', function(event) {
+  isDragging = true;
+
+  // Calcula a diferença entre a posição do mouse e a posição do container
+  offsetX = event.clientX - container.offsetLeft;
+  offsetY = event.clientY - container.offsetTop;
+
+  // Evita seleção de texto durante o arraste
+  event.preventDefault();
+});
+
+// Função que move o container enquanto o mouse se move
+document.addEventListener('mousemove', function(event) {
+  if (isDragging) {
+    // Atualiza a posição do container
+    container.style.left = (event.clientX - offsetX) + 'px';
+    container.style.top = (event.clientY - offsetY) + 'px';
+  }
+});
+
+// Função que termina o arraste quando o mouse é solto
+document.addEventListener('mouseup', function() {
+  isDragging = false;
+});
 
